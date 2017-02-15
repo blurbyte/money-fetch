@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Headline from './Headline';
+
 class CurrencyPanel extends React.Component {
   render() {
     return (
-      <h1>Welcome!</h1>
+      <article>
+        <Headline>Select currency</Headline>
+      </article>
     );
   }
 }
