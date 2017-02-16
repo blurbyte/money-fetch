@@ -1,3 +1,4 @@
 export default {
-  currencies: {}
+  currencies: {},
+  selectedCurrencies: []
 };

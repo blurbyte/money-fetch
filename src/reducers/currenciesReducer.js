@@ -1,7 +1,7 @@
 import initialState from './initialState';
 import * as types from '../actions/actionTypes';
 
-const storyReducer = (state = initialState.currencies, action) => {
+const currenciesReducer = (state = initialState.currencies, action) => {
   switch(action.type) {
     case types.REQUEST_CURRENCIES_SUCCESS:
       return action.currencies;
@@ -10,4 +10,4 @@ const storyReducer = (state = initialState.currencies, action) => {
   }
 };
 
-export default storyReducer;
+export default currenciesReducer;
