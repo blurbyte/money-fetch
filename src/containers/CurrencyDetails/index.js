@@ -9,15 +9,21 @@ import Headline from '../../components/Headline';
 
 class CurrencyDetails extends React.Component {
   render() {
+
     let content = (<Message>There are no selected currencies yet.</Message>);
 
-    if(true) {
-      content = (<DetailedCurrencyItem />);
+    if (this.props.selectedCurrencies.length) {
+      //maps array of currency 3-digit codes
+      content = this.props.selectedCurrencies.map(item =>
+        (<DetailedCurrencyItem
+          key={`detailed-currency-${item}`}
+          details={this.props.currencies[item]}
+        />));
     }
 
     return (
       <Section>
-        <Headline vivid>Currency details</Headline>
+        <Headline vivid>Selected currencies details</Headline>
         <DetailsList>
           {content}
         </DetailsList>
@@ -27,12 +33,14 @@ class CurrencyDetails extends React.Component {
 }
 
 CurrencyDetails.propTypes = {
-  currencies: PropTypes.object
+  currencies: PropTypes.object,
+  selectedCurrencies: PropTypes.array
 };
 
 const mapStateToProps = (state) => (
   {
-    currencies: state.currencies
+    currencies: state.currencies,
+    selectedCurrencies: state.selectedCurrencies
   }
 );
 

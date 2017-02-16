@@ -6,15 +6,17 @@ import { requestCurrenciesSuccess, requestCurrenciesFail } from '../actions/curr
 //helper functions
 import { toMapByCode } from '../utilities/toMap';
 
-import { apiEndpoint } from '../utilities/apiPaths';
+import * as endpoints from '../utilities/apiPaths';
 
 // general purpose fetching function
 export function fetchCurrenciesFromServer() {
-  return fetch(apiEndpoint)
+  return fetch(endpoints.CURRENCY_ENDPOINT)
     .then(response => response.json())
     //format currencies list
     .then(json => toMapByCode(json[0].rates));
 }
+
+// Fetching currencies
 
 export function* fetchCurrencies() {
   try {
