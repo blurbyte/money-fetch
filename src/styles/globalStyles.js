@@ -16,6 +16,7 @@ injectGlobal`
 
   ::selection {
     background: transparent;
+    color: inherit;
   }
 
   html, body {
@@ -31,7 +32,7 @@ injectGlobal`
   }
 
   body {
-    background: #f4f0ed;
+    background: #fff;
     overflow-y: scroll;
     font-family: Arial, Helvetica, sans-serif;
   }
