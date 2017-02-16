@@ -14,6 +14,10 @@ injectGlobal`
     src:  url('${OpenSansBold}') format('woff2');
   }
 
+  ::selection {
+    background: transparent;
+  }
+
   html, body {
       width: 100%;
       height: 100%;
