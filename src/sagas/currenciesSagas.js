@@ -6,7 +6,7 @@ import { requestCurrenciesSuccess, requestCurrenciesFail } from '../actions/curr
 //helper functions
 import { toMapByCode } from '../utilities/toMap';
 
-const apiEndpoint = 'http://api.nbp.pl/api/exchangerates/tables/A/?format=json';
+import { apiEndpoint } from '../utilities/apiPaths';
 
 // general purpose fetching function
 export function fetchCurrenciesFromServer() {

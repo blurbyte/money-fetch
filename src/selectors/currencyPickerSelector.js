@@ -1,5 +1,5 @@
 import keys from 'ramda/src/keys';
 
-export default function currencyPanelSelector(currencies) {
+export default function currencyPickerSelector(currencies) {
   return keys(currencies);
 }
