@@ -13,9 +13,11 @@ function configureStoreProd(initialState) {
     sagaMiddleware
   ];
 
+  const prodStore = createStore(rootReducer, initialState, compose(applyMiddleware(...middlewares)));
+
   sagaMiddleware.run(currenciesSagas);
 
-  return createStore(rootReducer, initialState, compose(applyMiddleware(...middlewares)));
+  return prodStore;
 }
 
 function configureStoreDev(initialState) {
