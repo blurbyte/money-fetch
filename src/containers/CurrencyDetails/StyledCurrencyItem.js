@@ -10,6 +10,7 @@ const fadeIn = keyframes`
 `;
 
 const StyledCurrencyItem = styled.li`
+  position: relative;
   background-color: #fff;
   width: 26.4rem;
   height: 14.4rem;

@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 
+import { removeSelectedCurrency } from '../../actions/selectedCurrenciesActions';
+
 import DetailsList from './DetailsList';
 import Message from './Message';
 import DetailedCurrencyItem from './DetailedCurrencyItem';
@@ -8,6 +10,16 @@ import Section from '../../components/Section';
 import Headline from '../../components/Headline';
 
 class CurrencyDetails extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleItemRemove = this.handleItemRemove.bind(this);
+  }
+
+  handleItemRemove(code) {
+    this.props.removeSelectedCurrency(code);
+  }
+
   render() {
 
     let content = (<Message>There are no selected currencies yet.</Message>);
@@ -18,6 +30,7 @@ class CurrencyDetails extends React.Component {
         (<DetailedCurrencyItem
           key={`detailed-currency-${item}`}
           details={this.props.currencies[item]}
+          handleItemRemove={this.handleItemRemove}
         />));
     }
 
@@ -34,7 +47,8 @@ class CurrencyDetails extends React.Component {
 
 CurrencyDetails.propTypes = {
   currencies: PropTypes.object,
-  selectedCurrencies: PropTypes.array
+  selectedCurrencies: PropTypes.array,
+  removeSelectedCurrency: PropTypes.func
 };
 
 const mapStateToProps = (state) => (
@@ -46,7 +60,7 @@ const mapStateToProps = (state) => (
 
 const mapDispatchToProps = (dispatch) => (
   {
-    dispatch
+    removeSelectedCurrency: (code) => dispatch(removeSelectedCurrency(code))
   }
 );
 

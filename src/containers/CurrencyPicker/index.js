@@ -17,15 +17,15 @@ class CurrencyPicker extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleItemClick = this.handleItemClick.bind(this);
+    this.handleItemSelect = this.handleItemSelect.bind(this);
   }
 
   componentWillMount() {
     this.props.requestCurrencies();
   }
 
-  handleItemClick(item) {
-    this.props.selectCurrency(item);
+  handleItemSelect(code) {
+    this.props.selectCurrency(code);
   }
 
   render() {
@@ -34,7 +34,7 @@ class CurrencyPicker extends React.Component {
     if (this.props.currencies) {
       content = this.props.currencies.map(item =>
         (<CurrencyItem
-          onClick={this.handleItemClick}
+          onClick={this.handleItemSelect}
           item={item}
           key={item}
           selected={contains(item, this.props.selectedCurrencies)}
