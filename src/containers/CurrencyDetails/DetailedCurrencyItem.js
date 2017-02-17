@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 import StyledCurrencyItem from './StyledCurrencyItem';
 import TextLine from './TextLine';
-import CloseButton from './CloseButton';
+import CloseButton from '../../components/CloseButton';
 import CurrentCurrencyCode from './CurrentCurrencyCode';
 
 const DetailedCurrencyItem = ({details, handleItemRemove}) => {

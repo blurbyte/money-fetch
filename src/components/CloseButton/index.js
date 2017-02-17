@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import styled from 'styled-components';
 
-import RegularButton from './../../components/Button';
-import CloseCross from '../../components/Icons/CloseCross';
+import RegularButton from '../Button';
+import CloseCross from '../Icons/CloseCross';
 
 const Button = styled(RegularButton) `
   position: absolute;
