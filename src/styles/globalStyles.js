@@ -14,11 +14,6 @@ injectGlobal`
     src:  url('${OpenSansBold}') format('woff2');
   }
 
-  ::selection {
-    background: transparent;
-    color: inherit;
-  }
-
   html, body {
       width: 100%;
       height: 100%;
@@ -35,6 +30,12 @@ injectGlobal`
     background: #fff;
     overflow-y: scroll;
     font-family: Arial, Helvetica, sans-serif;
+    /* text selection disabled */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
 
   input, textarea, button, select, label, a {
