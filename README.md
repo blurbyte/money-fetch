@@ -12,3 +12,5 @@ To set project up:
 4. Enter project folder and install all modules with `yarn` command or use good old `npm install`
 5. Start development version of project with `npm start -s` or production one with `npm run build -s`
 6. To run tests just use `npm test`
+
+Tested on Edge, Chrome, Firefox, Safari (iOS10)
