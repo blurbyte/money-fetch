@@ -25,7 +25,7 @@ class CurrencyDetails extends React.Component {
     let content = (<Message>There are no selected currencies yet.</Message>);
 
     if (this.props.selectedCurrencies.length) {
-      //maps array of currency 3-digit codes
+      //maps array of currency 3-letters codes
       content = this.props.selectedCurrencies.map(item =>
         (<DetailedCurrencyItem
           key={`detailed-currency-${item}`}

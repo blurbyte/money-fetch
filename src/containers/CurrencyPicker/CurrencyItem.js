@@ -3,12 +3,9 @@ import React, { PropTypes } from 'react';
 import StyledItem from './StyledItem';
 
 const CurrencyItem = ({item, selected, onClick }) => {
-  if(selected) {
-    return (
-      <StyledItem selected>{item}</StyledItem>
-    );
-  }
-  return <StyledItem onClick={() => onClick(item)}>{item}</StyledItem>;
+  return selected ?
+    <StyledItem selected>{item}</StyledItem> :
+    <StyledItem onClick={() => onClick(item)}>{item}</StyledItem>;
 };
 
 CurrencyItem.propTypes = {
