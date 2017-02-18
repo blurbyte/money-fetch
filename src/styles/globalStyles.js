@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import media from './media';
 
 import OpenSansLight from '../fonts/OpenSans-Light.woff2';
 import OpenSansBold from '../fonts/OpenSans-Bold.woff2';
@@ -52,5 +53,25 @@ injectGlobal`
     color: #444;
     line-height: 1.4;
     margin: 0.8rem 0;
+  }
+
+  /* AnimatedList component css-transition classes */
+  .animated-list-enter {
+    opacity: 0;
+  }
+
+  .animated-list-enter.animated-list-enter-active {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+  }
+
+  .animated-list-leave {
+    opacity: 1;
+  }
+
+  .animated-list-leave.animated-list-leave-active {
+    opacity: 0;
+    ${media.phone`height: 0;`}
+    transition: all 0.3s ease-out;
   }
 `;

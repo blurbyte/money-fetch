@@ -22,7 +22,7 @@ class CurrencyDetails extends React.Component {
 
   render() {
 
-    let content = (<Message>There are no selected currencies yet.</Message>);
+    let content = (<Message key={0}>There are no selected currencies yet.</Message>);
 
     if (this.props.selectedCurrencies.length) {
       //maps array of currency 3-letters codes

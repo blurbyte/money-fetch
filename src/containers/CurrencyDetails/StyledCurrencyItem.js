@@ -1,13 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
+import styled from 'styled-components';
+import media from '../../styles/media';
 
 const StyledCurrencyItem = styled.li`
   position: relative;
@@ -25,10 +17,11 @@ const StyledCurrencyItem = styled.li`
   font-size: 1.6rem;
   color: #777;
   transition: all 0.1s ease;
-  animation: ${fadeIn} 0.4s ease-out;
+  overflow: hidden;
 
   &:hover {
     background-color: #e5f0e6;
+    ${media.tablet`background-color: #fff;`}
   }
 `;
 

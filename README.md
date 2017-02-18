@@ -13,4 +13,4 @@ To set project up:
 5. Start development version of project with `npm start -s` or production one with `npm run build -s`
 6. To run tests just use `npm test`
 
-Tested on Edge, Chrome, Firefox, Safari (iOS10)
+Tested on Edge, Chrome, Firefox, Safari (iOS10).
