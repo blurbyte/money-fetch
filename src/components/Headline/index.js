@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 const Headline = styled.h2`
   font-family: 'OpenSans Light', Arial, Helvetica, sans-serif;
@@ -12,6 +13,7 @@ const Headline = styled.h2`
   padding: 1.2rem 2.2rem 0.6rem 2.2rem;
   margin: 0;
   background-color: ${props => props.vivid ? '#fff' : 'rgba(255,255,255, 0.4)'};
+  ${media.phone`text-align: center;`}
 `;
 
 export default Headline;

@@ -4,9 +4,10 @@ import media from '../../styles/media';
 
 const HomeLink = styled(IndexLink)`
   display: inline-block;
-  padding-left: 2.2rem;
+  padding: 0 2.2rem;
+
   & svg {
-    ${media.phone`width: 30rem; `}
+    ${media.phone`width: 28rem;`}
   }
 `;
 

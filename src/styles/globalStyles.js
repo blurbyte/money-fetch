@@ -39,7 +39,7 @@ injectGlobal`
             user-select: none;
   }
 
-  input, textarea, button, select, label, a {
+  input, textarea, button, select, label, a, li {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     outline: none;
   }

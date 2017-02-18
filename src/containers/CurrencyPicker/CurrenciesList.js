@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 const CurrenciesList = styled.ul`
   display: flex;
@@ -7,6 +8,9 @@ const CurrenciesList = styled.ul`
   padding: 0;
   padding-bottom: 4rem;
   list-style: none;
+  ${media.phone`
+    justify-content: center;
+  `}
 `;
 
 export default CurrenciesList;

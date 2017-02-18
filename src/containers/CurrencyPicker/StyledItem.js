@@ -19,14 +19,14 @@ const StyledItem = styled.li`
   ${props => {
     if (!props.selected) {
       return css`
-      &:hover {
-    background-color: #d2d2f1;
-  }
+        &:hover {
+          background-color: #d2d2f1;
+        }
 
-  &:active {
-    background-color: #a5a5e3;
-    box-shadow: 0 1px 1px -1px rgba(80,80,80,0.1);
-  }
+        &:active {
+          background-color: #a5a5e3;
+          box-shadow: 0 1px 1px -1px rgba(80,80,80,0.1);
+        }
       `;
     }
   }}

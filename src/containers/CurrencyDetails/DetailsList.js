@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../../styles/media';
 
 import AnimatedList from '../../components/AnimatedList';
 
@@ -10,6 +11,11 @@ const DetailsList = styled(AnimatedList)`
   padding: 0.6rem 2rem 6rem 2rem;
   display: flex;
   flex-wrap: wrap;
+  ${media.phone`
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 export default DetailsList;
