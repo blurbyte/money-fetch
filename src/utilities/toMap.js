@@ -1,5 +1,6 @@
-import indexBy from 'ramda/src/indexBy';
-import prop from 'ramda/src/prop';
+import reduce from 'ramda/src/reduce';
 
-// TODO remove nested currency
-export const toMapByCode = indexBy(prop('code'));
+export const toHashMapByCode = reduce((result, item) => {
+  result[item.code] = { currency: item.currency, exchange: item.mid };
+  return result;
+}, {});

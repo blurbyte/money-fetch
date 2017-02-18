@@ -1,20 +1,20 @@
-import { toMapByCode } from '../toMap';
+import { toHashMapByCode } from '../toMap';
 
 describe('toMapByCode', () => {
   it('should transform array to hash map', () => {
     const collectionBefore = [
       {
-        curency: 'dolar',
+        currency: 'dolar',
         code: 'USD',
         mid: 4.01
       },
       {
-        curency: 'euro',
+        currency: 'euro',
         code: 'EUR',
         mid: 4.32
       },
       {
-        curency: 'forint',
+        currency: 'forint',
         code: 'HUF',
         mid: 0.013
       }
@@ -22,23 +22,20 @@ describe('toMapByCode', () => {
 
     const collectionAfter = {
       'USD': {
-        curency: 'dolar',
-        code: 'USD',
-        mid: 4.01
+        currency: 'dolar',
+        exchange: 4.01
       },
       'EUR': {
-        curency: 'euro',
-        code: 'EUR',
-        mid: 4.32
+        currency: 'euro',
+        exchange: 4.32
       },
       'HUF': {
-        curency: 'forint',
-        code: 'HUF',
-        mid: 0.013
+        currency: 'forint',
+        exchange: 0.013
       },
     };
 
-    expect(toMapByCode(collectionBefore)).toEqual(collectionAfter);
+    expect(toHashMapByCode(collectionBefore)).toEqual(collectionAfter);
 
   });
 });

@@ -5,17 +5,17 @@ import TextLine from './TextLine';
 import CloseButton from '../../components/CloseButton';
 import CurrentCurrencyCode from './CurrentCurrencyCode';
 
-const DetailedCurrencyItem = ({details, handleItemRemove}) => {
+const DetailedCurrencyItem = ({code, details, handleItemRemove}) => {
   // shortening currency name if it is too long
   const CHAR_LIMIT = 24;
 
   return (
     <StyledCurrencyItem>
-      <CloseButton onClick={() => handleItemRemove(details.code)} />
-      <TextLine code>{details.code}</TextLine>
+      <CloseButton onClick={() => handleItemRemove(code)} />
+      <TextLine code>{code}</TextLine>
       <TextLine name>{details.currency.length < CHAR_LIMIT ? details.currency : `${details.currency.slice(0, CHAR_LIMIT)}...)`}</TextLine>
       <TextLine exchange>
-        {details.mid}
+        {details.exchange}
         <CurrentCurrencyCode>{'PLN'}</CurrentCurrencyCode>
       </TextLine>
     </StyledCurrencyItem>
@@ -23,10 +23,10 @@ const DetailedCurrencyItem = ({details, handleItemRemove}) => {
 };
 
 DetailedCurrencyItem.propTypes = {
+  code: PropTypes.string,
   details: PropTypes.shape({
     currency: PropTypes.string,
-    code: PropTypes.string,
-    mid: PropTypes.number
+    exchange: PropTypes.number
   }),
   handleItemRemove: PropTypes.func
 };

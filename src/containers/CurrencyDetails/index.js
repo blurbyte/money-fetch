@@ -29,6 +29,7 @@ class CurrencyDetails extends React.Component {
       content = this.props.selectedCurrencies.map(item =>
         (<DetailedCurrencyItem
           key={`detailed-currency-${item}`}
+          code={item}
           details={this.props.currencies[item]}
           handleItemRemove={this.handleItemRemove}
         />));
