@@ -14,3 +14,5 @@ To set project up:
 6. To run tests just use `npm test`
 
 Tested on Edge, Chrome, Firefox, Safari (iOS10).
+
+To try fully working _desktop_ and _mobile_ version go to http://moneyfetch.surge.sh
