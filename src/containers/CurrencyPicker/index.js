@@ -29,23 +29,17 @@ class CurrencyPicker extends React.Component {
   }
 
   render() {
-    let content = (<div></div>);
-
-    if (this.props.currencies) {
-      content = this.props.currencies.map(item =>
-        (<CurrencyItem
-          onClick={this.handleItemSelect}
-          item={item}
-          key={item}
-          selected={contains(item, this.props.selectedCurrencies)}
-        />));
-    }
-
     return (
       <Wrapper>
         <Headline>Select currency</Headline>
-        <CurrenciesList>
-          {content}
+        <CurrenciesList>{
+          this.props.currencies.map(item =>
+            <CurrencyItem
+              onClick={this.handleItemSelect}
+              item={item}
+              key={item}
+              selected={contains(item, this.props.selectedCurrencies)}
+            />)}
         </CurrenciesList>
       </Wrapper>
     );
