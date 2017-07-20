@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import StyledCurrencyItem from './StyledCurrencyItem';
 import TextLine from './TextLine';
