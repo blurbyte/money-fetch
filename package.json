@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "Simple currency web app",
   "scripts": {
-    "preremove-demo": "npm run remove-dist",
-    "remove-demo": "babel-node tools/removeDemo.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "npm-run-all --parallel start-message remove-dist",
     "start": "npm-run-all --parallel  open:src lint:watch test:watch",
