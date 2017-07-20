@@ -1,6 +1,7 @@
 {
   "presets": [
-    "react"
+    "react",
+    "stage-1"
   ],
   "plugins": [
     "transform-regenerator"
@@ -8,13 +9,13 @@
   "env": {
     "development": {
       "presets": [
-        "latest",
+        "env",
         "react-hmre"
       ]
     },
     "production": {
       "presets": [
-        ["latest", {
+        ["env", {
           "es2015": {
             "modules": false
           }
@@ -27,7 +28,7 @@
     },
     "test": {
       "presets": [
-        "latest"
+        "env"
       ]
     }
   }
