@@ -30,7 +30,7 @@ export default {
     }),
     new webpack.DefinePlugin(GLOBALS),
     new HtmlWebpackPlugin({
-      template: 'src/index.ejs',
+      template: 'src/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,

@@ -25,8 +25,9 @@ if (!window.Promise) {
   window.Promise = Promise;
 }
 
-// load favicon
+// load favicon & manifest.json
 import './favicon.ico';
+import './manifest.json'; // eslint-disable-line import/extensions
 
 // custom global styles
 import './styles/globalStyles';
