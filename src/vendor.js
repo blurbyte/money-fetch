@@ -5,7 +5,6 @@ import 'react';
 import 'react-dom';
 import 'redux';
 import 'react-redux';
-import 'redux-thunk';
 import 'react-router';
 import 'react-router-redux';
 import 'react-helmet';

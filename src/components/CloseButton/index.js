@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import RegularButton from '../Button';
 import CloseCross from '../Icons/CloseCross';
 
-const Button = styled(RegularButton) `
+const Button = RegularButton.extend`
   position: absolute;
   top: 0;
   right: 0;

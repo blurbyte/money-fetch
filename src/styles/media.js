@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const sizes = {
   desktop: 1000,
   tablet: 768,
-  phone: 376
+  phone: 414
 };
 
 // iterate through the sizes and create a media template

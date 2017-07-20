@@ -1,8 +1,6 @@
-import styled from 'styled-components';
-
 import Section from '../../components/Section';
 
-const Wrapper = styled(Section)`
+const Wrapper = Section.extend`
   background: #f4f0ed;
 `;
 
