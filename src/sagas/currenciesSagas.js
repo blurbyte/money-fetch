@@ -1,5 +1,5 @@
 import * as types from '../actions/actionTypes';
-import { takeLatest, call, put, fork } from 'redux-saga/effects';
+import { takeLatest, call, put, fork, all } from 'redux-saga/effects';
 
 import { requestCurrenciesSuccess, requestCurrenciesFail } from '../actions/currenciesActions';
 
@@ -33,7 +33,7 @@ export function* fetchCurrenciesSaga() {
 }
 
 export default function* currenciesSagas() {
-  yield [
+  yield  all([
     fork(fetchCurrenciesSaga)
-  ];
+  ]);
 }
