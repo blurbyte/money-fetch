@@ -1,4 +1,4 @@
-{
+module.exports = {
   "root": true,
   "extends": [
     "eslint:recommended",
@@ -35,7 +35,10 @@
     "no-underscore-dangle": 0,
     "no-alert": 0,
     "no-lone-blocks": 0,
+    "spaced-comment": [2, "always"],
     "jsx-quotes": 1,
+    "import/no-unresolved": 2,
+    "import/no-named-as-default": 0,
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
     "react/forbid-prop-types": [1, {"forbid": ["any"]}],
     "react/jsx-boolean-value": 0,

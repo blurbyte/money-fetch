@@ -1,16 +1,17 @@
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import path from 'path';
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 const GLOBALS = {
   'process.env.NODE_ENV': JSON.stringify('development'),
   __DEV__: true
 };
 
-export default {
-  devtool: 'cheap-module-eval-source-map',
+module.exports = {
+  devtool: 'eval-source-map',
   entry: [
     './src/webpack-public-path',
+    'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'src/index')
   ],
@@ -36,6 +37,9 @@ export default {
       inject: true
     })
   ],
+  resolve: {
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
+  },
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
