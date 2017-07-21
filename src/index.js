@@ -37,3 +37,8 @@ render(
   </Provider>,
   document.getElementById('app')
 );
+
+// install ServiceWorker
+if (process.env.NODE_ENV === 'production') {
+  require('offline-plugin/runtime').install();
+}
