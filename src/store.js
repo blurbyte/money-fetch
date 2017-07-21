@@ -1,5 +1,6 @@
 // store configuration (middlewares) depending on environment setting
 import { createStore, applyMiddleware, compose } from 'redux';
+import { autoRehydrate } from 'redux-persist';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import createSagaMiddleware from 'redux-saga';
 
@@ -13,7 +14,7 @@ function configureStoreProd(initialState) {
     sagaMiddleware
   ];
 
-  const prodStore = createStore(rootReducer, initialState, compose(applyMiddleware(...middlewares)));
+  const prodStore = createStore(rootReducer, initialState, compose(applyMiddleware(...middlewares), autoRehydrate()));
 
   sagaMiddleware.run(currenciesSagas);
 
@@ -28,7 +29,7 @@ function configureStoreDev(initialState) {
 
   const enhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-  const devStore = createStore(rootReducer, initialState, enhancers(applyMiddleware(...middlewares)));
+  const devStore = createStore(rootReducer, initialState, enhancers(applyMiddleware(...middlewares), autoRehydrate()));
 
   // enable hot module replacement for reducers
   if (module.hot) {

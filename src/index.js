@@ -5,6 +5,8 @@ import 'regenerator-runtime/runtime';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+
 
 import App from './containers/App';
 
@@ -30,6 +32,9 @@ import './styles/globalStyles';
 
 const initialState = {};
 const store = configureStore(initialState);
+
+// begin persisting the store
+persistStore(store);
 
 render(
   <Provider store={store}>

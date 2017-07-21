@@ -9,3 +9,4 @@ import 'react-helmet';
 import 'styled-components';
 import 'redux-saga';
 import 'react-transition-group';
+import 'redux-persist';

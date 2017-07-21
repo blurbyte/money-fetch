@@ -55,7 +55,9 @@ module.exports = {
     new OfflinePlugin({
       relativePaths: false,
       publicPath: '/',
-      autoUpdate: 1000 * 60 * 60 * 4
+      autoUpdate: 1000 * 60 * 60 * 4,
+      safeToUseOptionalCaches: true,
+      AppCache: false
     })
   ],
   resolve: {
