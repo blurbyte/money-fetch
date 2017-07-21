@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 const AnimatedList = ({children, className}) => {
   return (
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className={className}
       component="ul"
       transitionName="animated-list"
       transitionEnterTimeout={400}
       transitionLeaveTimeout={300}>
       {children}
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   );
 };
 

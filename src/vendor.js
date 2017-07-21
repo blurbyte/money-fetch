@@ -8,4 +8,4 @@ import 'react-redux';
 import 'react-helmet';
 import 'styled-components';
 import 'redux-saga';
-import 'react-addons-css-transition-group';
+import 'react-transition-group';
