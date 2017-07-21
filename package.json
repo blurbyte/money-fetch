@@ -1,6 +1,6 @@
 {
   "name": "money-fetch",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simple currency web app",
   "scripts": {
     "start-message": "babel-node tools/startMessage.js",
