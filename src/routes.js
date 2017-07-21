@@ -1,4 +1,4 @@
-//Application routes declarations
+// Application routes declarations
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 

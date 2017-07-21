@@ -1,7 +1,7 @@
 // required for redux-saga generatos
-import "regenerator-runtime/runtime";
+import 'regenerator-runtime/runtime';
 
-/*eslint-disable import/default */
+/* eslint-disable import/default */
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -26,8 +26,8 @@ if (!window.Promise) {
 }
 
 // load favicon & manifest.json
-import './favicon.ico';
-import './manifest.json'; // eslint-disable-line import/extensions
+import '!file-loader?name=[name].[ext]!./favicon.ico';
+import '!file-loader?name=[name].[ext]!./manifest.json'; // eslint-disable-line import/extensions
 
 // custom global styles
 import './styles/globalStyles';

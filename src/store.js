@@ -45,6 +45,4 @@ function configureStoreDev(initialState) {
 
 const store = process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev;
 
-
-
 export default store;

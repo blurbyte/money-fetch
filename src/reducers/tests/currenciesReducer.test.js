@@ -7,7 +7,7 @@ describe('currencies reducer', () => {
 
     // arrange
     const stateBefore = {};
-    //also got passed to action creator
+    // also got passed to action creator
     const stateAfter = {
       'USD': {
         curency: 'dolar',

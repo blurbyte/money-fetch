@@ -3,7 +3,7 @@ import { takeLatest, call, put, fork, all } from 'redux-saga/effects';
 
 import { requestCurrenciesSuccess, requestCurrenciesFail } from '../actions/currenciesActions';
 
-//helper functions
+// helper functions
 import { toHashMapByCode } from '../utilities/toMap';
 
 import * as endpoints from '../utilities/apiPaths';
@@ -12,7 +12,7 @@ import * as endpoints from '../utilities/apiPaths';
 export function fetchCurrenciesFromServer() {
   return fetch(endpoints.CURRENCY_ENDPOINT)
     .then(response => response.json())
-    //format currencies list
+    // format currencies list
     .then(json => toHashMapByCode(json[0].rates));
 }
 
