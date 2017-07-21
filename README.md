@@ -14,4 +14,4 @@ To set project up:
 
 Tested on Edge, Chrome, Firefox, Safari (iOS10).
 
-To try fully working _desktop_ and _mobile_ version go to http://moneyfetch.surge.sh
+To try fully working _desktop_ and _mobile_ version go to https://moneyfetch.surge.sh
