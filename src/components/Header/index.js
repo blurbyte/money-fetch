@@ -2,12 +2,12 @@ import React from 'react';
 
 // components
 import Banner from './Banner';
-import HomeLink from './HomeLink';
+import LogoWrapper from './LogoWrapper';
 import Logo from '../Icons/Logo';
 
 const Header = () => (
   <Banner>
-    <HomeLink to="/"><Logo width={340} height={48} /></HomeLink>
+    <LogoWrapper><Logo width={340} height={48} /></LogoWrapper>
   </Banner>
 );
 

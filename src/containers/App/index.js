@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import AppWrapper from './AppWrapper';
 import Header from '../../components/Header';
+import CurrencyPanel from '../CurrencyPanel';
 
 class App extends React.Component {
   render() {
@@ -11,14 +11,10 @@ class App extends React.Component {
       <AppWrapper>
         <Helmet titleTemplate="%s | MoneyFetch" defaultTitle="MoneyFetch" meta={[{ name: 'description', content: 'Simple currency web app' }]} />
         <Header />
-        {this.props.children}
+        <CurrencyPanel />
       </AppWrapper>
     );
   }
 }
-
-App.propTypes = {
-  children: PropTypes.object.isRequired
-};
 
 export default App;

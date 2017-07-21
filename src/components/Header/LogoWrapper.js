@@ -1,8 +1,7 @@
-import { IndexLink } from 'react-router';
 import styled from 'styled-components';
 import media from '../../styles/media';
 
-const HomeLink = styled(IndexLink)`
+const LogoWrapper = styled.div`
   display: inline-block;
   padding: 0 2.2rem;
 
@@ -11,4 +10,4 @@ const HomeLink = styled(IndexLink)`
   }
 `;
 
-export default HomeLink;
+export default LogoWrapper;
