@@ -85,6 +85,7 @@
     "prop-types": "15.5.10",
     "react-test-renderer": "15.6.1",
     "redux-immutable-state-invariant": "2.0.0",
+    "redux-persist-transform-compress": "4.2.0",
     "regenerator": "0.9.7",
     "rimraf": "2.6.1",
     "style-loader": "0.18.2",
